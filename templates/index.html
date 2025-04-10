@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Platformu</title>
+</head>
+<body>
+    <h1>Video Paylaşım Platformu</h1>
+    <a href="{{ url_for('upload') }}">Video Yükle</a>
+    <ul>
+        {% for video in videos %}
+        <li>
+            <a href="{{ url_for('watch', video_id=video[0]) }}">{{ video[2] }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
